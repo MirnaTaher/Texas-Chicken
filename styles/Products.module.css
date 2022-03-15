@@ -1,0 +1,11 @@
+.selected, .normal:hover{
+    color:#f8b02d !important;
+    border-bottom: 1px solid #f8b02d;
+}
+.normal{
+    color: #9a3324;
+    border-bottom: 1px solid #e9e8e7;
+}
+.product{
+    
+}

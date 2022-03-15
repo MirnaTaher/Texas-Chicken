@@ -1,0 +1,15 @@
+.navbar{
+    background-color: #2C2925;
+    color:#F8B02D;
+}
+.logo{
+    width: 106px;
+    height: 92px;
+}
+.a{
+    color: #f8b02d !important;
+    font-size: 18px;
+}
+.a:hover{
+    color: #9a3324 !important;
+}
