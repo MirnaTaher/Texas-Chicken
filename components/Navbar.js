@@ -3,14 +3,12 @@ import styles from "../styles/Navbar.module.css";
 import logoEn from "../public/assets/img/logo-EN.webp";
 import logoAr from "../public/assets/img/logo-AR.webp";
 import cart from "../public/assets/img/shopping-bag.png"
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
-// import { faEarthAmerica } from "@fortawesome/free-solid-svg-icons";
+
 export const Navbar = () => {
   return (
     <nav className={`navbar navbar-expand-lg navbar-light ${styles.navbar}`}>
       <div className="container">
-        <Image src={logoEn} alt="texas chicken" className={styles.logo}></Image>
+        <Image src={logoEn} alt="texas chicken" className={styles.logo} width={106} height={92}></Image>
         <button
           className="navbar-toggler"
           type="button"

@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-
 import Link from "next/link";
 import styles from "../../../styles/Products.module.css";
 //how many paths it needs to generate and saving its ids
@@ -36,28 +35,29 @@ const Products = ({ products, categories, id }) => {
   return (
     <>
       <ul className="nav flex-column">
-      {categories.map((category) => (
-        <li key={category.ID}>
-          <Link href={"/categories/" + category.ID.toString()} passHref>
-            <a
-              className={`text-decoration-none ${
-                category.ID == id ? `${styles.selected}` : `${styles.normal}`
-              }`}
-            >
-              {category.Name}
-            </a>
-          </Link>
-        </li>
-      ))}
-    </ul>
+        {categories.map((category) => (
+          <li key={category.ID}>
+            <Link href={"/categories/" + category.ID.toString()} passHref>
+              <a
+                className={`text-decoration-none ${
+                  category.ID == id ? `${styles.selected}` : `${styles.normal}`
+                }`}
+              >
+                {category.Name}
+              </a>
+            </Link>
+          </li>
+        ))}
+      </ul>
       <div>
         {categories.map((category) => {
           if (category.ID == id) {
             return <h2>{category.Name}</h2>;
           }
         })}
+        <div className="row">
         {Object.values(products).map((product) => (
-          <div key={product.ID}>
+          <div className="col-md-4" key={product.ID}>
             <a href={`/categories/${id}/products/${product.ID}`}>
               <>
                 <img src={product.ImagePath} alt={product.Description}></img>
@@ -68,6 +68,7 @@ const Products = ({ products, categories, id }) => {
             </a>
           </div>
         ))}
+        </div>
       </div>
     </>
   );

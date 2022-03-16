@@ -11,12 +11,14 @@ export const getStaticProps = async () => {
 
 export default function Home({ categories }) {
   return (      
-      <div>
-        {console.log(categories)}
+      <div className={`${styles.parent} text-center py-5`}>
+        <div className="container position-relative">
+        {/* <div className={`${styles.overlay} position-absolute`}></div> */}
+        <div className="row">
         {categories.map((item) => (
-          <div key={item.id}>
+          <div key={item.id} className="col-md-4">
           <Link passHref href={"/categories/"+item.ID}>
-            <div className={styles.categoriesItem}>
+            <div className={styles.categoriesItem} >
               <img
                 className={styles.img}
                 src={item.ImagePath}
@@ -24,11 +26,13 @@ export default function Home({ categories }) {
                 width={250}
                 height={250}
               />
-              <button className={styles.btn}>{item.Name}</button>
+              <button className={`${styles.btn} d-block mx-auto py-3`}>{item.Name}</button>
             </div>
           </Link>
           </div>
         ))}
+        </div>
+        </div>
       </div>
   );
 }

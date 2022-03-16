@@ -1,10 +1,26 @@
+.parent{
+  background-image: url("../public/assets/img/bg_4.webp");
+}
+.overlay{
+  background-image: url("../public/assets/img/stamp.png");
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+  width:100%;
+  height: 70vh;
+  z-index: 1;
+}
 .btn{
   background-color: #9a3324;
   color: white;
+  width: 100%;
+  border-radius: 10px; 
 }
 .categoriesItem:hover .btn{
   background-color: #f8b02d;
   color: black;
+  z-index: 2;
+  position: relative;
 }
 .categoriesItem{
   cursor:pointer;
